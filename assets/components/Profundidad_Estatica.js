@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 // import { insertMedicion } from '../database';
 
-export default function Profundidad_Dinamica({ route, navigation }) {
+export default function Profundidad_Estatica({ route, navigation }) {
   const { medicionId, medicionNombre } = route.params;
   const [valor, setValor] = useState('');
 
   const handleSave = () => {
-    console.log(`Medición ${medicionNombre} (${medicionId}): ${valor}`);
+    console.log(`${medicionNombre} Estática (${medicionId}): ${valor}`);
     // insertMedicion(medicionId, medicionNombre, valor);
     navigation.goBack();
   };
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 // import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 // import { insertMedicion, fetchMediciones } from '../database';
 
-// export default function Profundidad_Dinamica({ route, navigation }) {
+// export default function Profundidad_Estatica({ route, navigation }) {
 //   const { medicionId, medicionNombre } = route.params;
 //   const [valor, setValor] = useState('');
 
